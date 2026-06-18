@@ -1,4 +1,6 @@
 FROM python:3.11-slim-bookworm AS build
+RUN pip install --no-cache-dir --upgrade pip && \
+    pip install --no-cache-dir psycopg2-binary
 
 WORKDIR /opt/CTFd
 
